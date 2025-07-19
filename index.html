@@ -37,7 +37,7 @@
             100% { transform: rotate(360deg); }
         }
         .profile-image-glow {
-            filter: drop-shadow(0 0 15px rgba(79, 70, 229, 0.5));
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.5), 0 0 30px rgba(79, 70, 229, 0.3);
         }
     </style>
 </head>
@@ -75,7 +75,7 @@
             <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                 <!-- Profile Picture -->
                 <div class="flex-shrink-0">
-                    <img src="./mypicture.png" alt="Mohammad Zafari" class="w-48 h-48 object-cover profile-image-glow">
+                    <img src="./mypicture.jpg" alt="Mohammad Zafari" class="w-48 h-48 rounded-full object-cover border-4 border-indigo-500 profile-image-glow">
                 </div>
                 <!-- Hero Text -->
                 <div class="text-center md:text-left">
