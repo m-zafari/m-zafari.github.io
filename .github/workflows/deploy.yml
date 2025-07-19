@@ -20,8 +20,7 @@ jobs:
 
     - name: Replace API Key Placeholder
       run: |
-        # Replace the placeholder in index.html with the actual secret API key
-        # We use sed for in-place replacement. Make sure the placeholder matches exactly.
+        # Ensure 'index.html' is in the root and the placeholder matches exactly.
         sed -i "s/PLACEHOLDER_GEMINI_API_KEY/${{ secrets.GEMINI_API_KEY }}/g" index.html
       shell: bash
     - name: Debug:Show index.html after sed
