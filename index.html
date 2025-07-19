@@ -37,7 +37,7 @@
             100% { transform: rotate(360deg); }
         }
         .profile-image-glow {
-            box-shadow: 0 0 15px rgba(79, 70, 229, 0.5), 0 0 30px rgba(79, 70, 229, 0.3);
+            filter: drop-shadow(0 0 15px rgba(79, 70, 229, 0.5));
         }
     </style>
 </head>
@@ -75,7 +75,7 @@
             <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                 <!-- Profile Picture -->
                 <div class="flex-shrink-0">
-                    <img src="./mypicture.jpg" alt="Mohammad Zafari" class="w-48 h-48 rounded-full object-cover border-4 border-indigo-500 profile-image-glow">
+                    <img src="./mypicture.png" alt="Mohammad Zafari" class="w-48 h-48 object-cover profile-image-glow">
                 </div>
                 <!-- Hero Text -->
                 <div class="text-center md:text-left">
@@ -376,8 +376,8 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        const API_KEY = ""; // This will be handled by the environment
-        const API_URL_FLASH = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+        // This is the URL for your secure middleman on Cloudflare.
+        const PROXY_URL = "https://my-portfolio-ai.zamoerr.workers.dev/"; 
 
         // --- AI Project Explainer Modal Logic ---
         const aiModal = document.getElementById('ai-modal');
@@ -423,7 +423,7 @@ Project Description: "${description}"`;
 
                 try {
                     const payload = { contents: [{ parts: [{ text: prompt }] }] };
-                    const response = await fetch(API_URL_FLASH, {
+                    const response = await fetch(PROXY_URL, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(payload)
@@ -440,7 +440,7 @@ Project Description: "${description}"`;
                 } catch (error) {
                     console.error("Gemini API Error:", error);
                     modalLoader.style.display = 'none';
-                    modalBody.textContent = "Sorry, I couldn't generate an explanation at this time.";
+                    modalBody.textContent = "Sorry, I am unable to answer at this moment. Please try again later.";
                 }
             });
         });
@@ -506,7 +506,7 @@ Your Answer:`;
 
             try {
                 const payload = { contents: [{ parts: [{ text: prompt }] }] };
-                const response = await fetch(API_URL_FLASH, {
+                const response = await fetch(PROXY_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
