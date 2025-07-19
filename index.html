@@ -353,9 +353,9 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
+        
         // Placeholder for the API Key - will be replaced by GitHub Actions
-        const API_KEY = "PLACEHOLDER_GEMINI_API_KEY"; 
+        const API_KEY = "PLACEHOLDER_GEMINI_API_KEY";
         const API_URL_FLASH = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`; // Changed model to 1.5-flash as 2.0-flash might be an older name.
 
         // --- AI Project Explainer Modal Logic ---
