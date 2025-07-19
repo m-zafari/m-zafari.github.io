@@ -11,17 +11,19 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-# --- THIS IS LINE 15 ---
+    # --- THIS IS LINE 15 ---
     - name: Debug:List files before sed
       run: ls -l
 
     - name: Debug:Show index.html before sed
       run: cat index.html
-
+      
     - name: Replace API Key Placeholder
       run: |
-        # Ensure 'index.html' is in the root and the placeholder matches exactly.
-        sed -i "s/PLACEHOLDER_GEMINI_API_KEY/${{ secrets.GEMINI_API_KEY }}/g" index.html
+        # Use awk for a more robust replacement that handles special characters better.
+        awk -i inplace '{gsub(/PLACEHOLDER_GEMINI_API_KEY/, ENVIRON["GEMINI_API_KEY_ACTUAL"]); print}' index.html
+      env:
+        GEMINI_API_KEY_ACTUAL: ${{ secrets.GEMINI_API_KEY }}
       shell: bash
     - name: Debug:Show index.html after sed
       run: cat index.html
