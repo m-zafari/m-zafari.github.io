@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # This is still correct: trigger on push to main
 
 jobs:
   build-and-deploy:
@@ -12,21 +12,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # New debug step to confirm secret is passed
-    - name: Debug:Show Secret Value (Masked)
-      run: echo "${{ secrets.GEMINI_API_KEY }}"
-
     - name: Replace API Key Placeholder
-      # We will use a more direct sed syntax without the multiline string and comments
       run: sed -i 's/PLACEHOLDER_GEMINI_API_KEY/${{ secrets.GEMINI_API_KEY }}/g' index.html
-      shell: bash # Explicitly define the shell
-
-    - name: Debug:Show index.html after sed
-      run: cat index.html
+      shell: bash
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./
-        publish_branch: main
+        publish_branch: gh-pages # <--- CHANGE THIS LINE
