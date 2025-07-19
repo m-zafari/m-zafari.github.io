@@ -12,13 +12,21 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: Debug: List files before sed
+      run: ls -l
+
+    - name: Debug: Show index.html before sed
+      run: cat index.html
+
     - name: Replace API Key Placeholder
       run: |
         # Replace the placeholder in index.html with the actual secret API key
         # We use sed for in-place replacement. Make sure the placeholder matches exactly.
         sed -i "s/PLACEHOLDER_GEMINI_API_KEY/${{ secrets.GEMINI_API_KEY }}/g" index.html
       shell: bash
-
+    - name: Debug: Show index.html after sed
+      run: cat index.html
+      
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
