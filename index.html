@@ -215,7 +215,6 @@
                         </div>
                         <div class="mt-4 flex flex-col space-y-2">
                             <a href="https://github.com/m-zafari/Knowledge-Distillation-Stanford40-and-CIFAR100.git" target="_blank" class="text-indigo-400 hover:text-indigo-300">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                            <button class="explain-button bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">✨ Explain with AI</button>
                         </div>
                     </div>
                 </div>
@@ -231,7 +230,6 @@
                         </div>
                         <div class="mt-4 flex flex-col space-y-2">
                             <a href="https://github.com/m-zafari/Three-Unsupervised-Clustering-Model.git" target="_blank" class="text-indigo-400 hover:text-indigo-300">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                            <button class="explain-button bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">✨ Explain with AI</button>
                         </div>
                     </div>
                 </div>
@@ -247,7 +245,6 @@
                         </div>
                         <div class="mt-4 flex flex-col space-y-2">
                             <a href="https://github.com/m-zafari/Digit-Recognition-With-MNIST-Dataset" target="_blank" class="text-indigo-400 hover:text-indigo-300">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                            <button class="explain-button bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">✨ Explain with AI</button>
                         </div>
                     </div>
                 </div>
@@ -262,7 +259,6 @@
                         </div>
                         <div class="mt-4 flex flex-col space-y-2">
                             <a href="https://github.com/m-zafari/Gradient-Descent-and-Newton-methods.git" target="_blank" class="text-indigo-400 hover:text-indigo-300">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                            <button class="explain-button bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">✨ Explain with AI</button>
                         </div>
                     </div>
                 </div>
@@ -277,7 +273,6 @@
                         </div>
                         <div class="mt-4 flex flex-col space-y-2">
                             <a href="https://github.com/mhdiamiri/15-puzzle-solver.git" target="_blank" class="text-indigo-400 hover:text-indigo-300">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                            <button class="explain-button bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">✨ Explain with AI</button>
                         </div>
                     </div>
                 </div>
@@ -292,31 +287,13 @@
                         </div>
                         <div class="mt-4 flex flex-col space-y-2">
                             <a href="https://github.com/m-zafari/Hotel-chain-database-SQL.git" target="_blank" class="text-indigo-400 hover:text-indigo-300">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                            <button class="explain-button bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">✨ Explain with AI</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="ai-interviewer" class="py-16">
-            <h2 class="section-title text-3xl font-bold text-white mb-8">Ask My AI Assistant</h2>
-            <div class="bg-gray-800 rounded-lg p-8">
-                <p class="text-lg text-gray-400 mb-4">You can ask questions about my experience, skills, or projects. My AI assistant, powered by Google Gemini, will answer based on my CV.</p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <input type="text" id="ai-question-input" class="flex-grow bg-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., What was your senior project?">
-                    <button id="ai-ask-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">Ask Question</button>
-                </div>
-                <div id="ai-answer-container" class="mt-6 p-6 bg-gray-900 rounded-lg min-h-[100px] hidden">
-                    <div id="ai-answer-loader" class="flex justify-center items-center">
-                        <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-10 w-10"></div>
-                    </div>
-                    <p id="ai-answer-text" class="text-gray-300 leading-relaxed"></p>
-                </div>
-            </div>
-        </section>
-
-    </main>
+        </main>
 
     <footer id="contact" class="bg-gray-800 border-t border-gray-700">
         <div class="container mx-auto px-6 py-12 text-center">
@@ -327,25 +304,10 @@
             </a>
             <div class="mt-12 text-sm text-gray-500">
                 <p>&copy; 2024 Mohammad Zafari. All Rights Reserved.</p>
-                <p class="mt-1">Designed with Tailwind CSS. AI features by Google Gemini.</p>
+                <p class="mt-1">Designed with Tailwind CSS.</p>
             </div>
         </div>
     </footer>
-
-    <div id="ai-modal" class="modal fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
-        <div class="modal-content bg-gray-800 rounded-lg shadow-2xl p-8 max-w-2xl w-full transform scale-95">
-            <div class="flex justify-between items-start">
-                <h2 id="modal-title" class="text-2xl font-bold mb-4 text-white">Project Explanation</h2>
-                <button id="close-modal-button" class="text-2xl text-gray-500 hover:text-white">&times;</button>
-            </div>
-            <div id="modal-body" class="text-gray-300 space-y-4 max-h-[60vh] overflow-y-auto">
-                <div id="modal-loader" class="flex justify-center items-center py-10">
-                    <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-16 w-16"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <script>
         // --- Mobile menu toggle ---
@@ -355,159 +317,7 @@
             mobileMenu.classList.toggle('hidden');
         });
         
-        // Placeholder for the API Key - will be replaced by GitHub Actions
-        const API_KEY = "PLACEHOLDER_GEMINI_API_KEY";
-        const API_URL_FLASH = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`; // Changed model to 1.5-flash as 2.0-flash might be an older name.
-
-        // --- AI Project Explainer Modal Logic ---
-        const aiModal = document.getElementById('ai-modal');
-        const closeModalButton = document.getElementById('close-modal-button');
-        const modalTitle = document.getElementById('modal-title');
-        const modalBody = document.getElementById('modal-body');
-        const modalLoader = document.getElementById('modal-loader');
-        const explainButtons = document.querySelectorAll('.explain-button');
-
-        const openModal = () => {
-            aiModal.classList.remove('hidden');
-            setTimeout(() => aiModal.querySelector('.modal-content').classList.remove('scale-95'), 10);
-        };
-
-        const closeModal = () => {
-            aiModal.querySelector('.modal-content').classList.add('scale-95');
-            setTimeout(() => aiModal.classList.add('hidden'), 250);
-        };
-
-        closeModalButton.addEventListener('click', closeModal);
-        aiModal.addEventListener('click', (event) => {
-            if (event.target === aiModal) {
-                closeModal();
-            }
-        });
-
-        explainButtons.forEach(button => {
-            button.addEventListener('click', async (event) => {
-                const projectCard = event.target.closest('.project-card');
-                const title = projectCard.querySelector('.project-title').textContent;
-                const description = projectCard.querySelector('.project-desc').textContent;
-
-                modalTitle.textContent = `Explaining: ${title}`;
-                modalBody.innerHTML = ''; 
-                modalBody.appendChild(modalLoader); 
-                modalLoader.style.display = 'flex';
-                openModal();
-
-                const prompt = `You are a helpful portfolio assistant. Explain the following computer science project in a friendly, engaging, and easy-to-understand way for a non-technical audience like a recruiter. Focus on the 'what' and 'why'. Keep it concise (2-3 short paragraphs).
-
-Project Title: "${title}"
-Project Description: "${description}"`;
-
-                try {
-                    const payload = { contents: [{ parts: [{ text: prompt }] }] };
-                    const response = await fetch(API_URL_FLASH, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (!response.ok) throw new Error(`API Error: ${response.statusText}`);
-                    
-                    const result = await response.json();
-                    const explanation = result.candidates[0].content.parts[0].text;
-                    
-                    modalLoader.style.display = 'none';
-                    modalBody.innerHTML = explanation.replace(/\n/g, '<br><br>');
-
-                } catch (error) {
-                    console.error("Gemini API Error:", error);
-                    modalLoader.style.display = 'none';
-                    modalBody.textContent = "Sorry, I couldn't generate an explanation at this time.";
-                }
-            });
-        });
-
-        // --- AI Interviewer Logic ---
-        const aiQuestionInput = document.getElementById('ai-question-input');
-        const aiAskButton = document.getElementById('ai-ask-button');
-        const aiAnswerContainer = document.getElementById('ai-answer-container');
-        const aiAnswerLoader = document.getElementById('ai-answer-loader');
-        const aiAnswerText = document.getElementById('ai-answer-text');
-
-        // This is the summarized context from your CV for the AI
-        const cvContext = `
-            My name is Mohammad Zafari.
-            My Education: I have a B.Sc. in Computer Science from Kharazmi University, graduating in June 2024 with a GPA of 3.9/4.0. I was ranked 3rd in my class of 40 students.
-            My Experience:
-            - Research Assistant at Kharazmi University (Feb 2023 - July 2023): I developed a knowledge distillation framework for image classification using PyTorch, inspired by recent advances in attention-based feature matching, improving student performance on the Stanford40 and CIFAR100 datasets, which uses an attention mechanism to identify effective feature pairs for distillation. This project was under the supervision of Prof. Mohammad Soltanian.
-            - Teaching Assistant for Theory of Computation at Kharazmi University (Feb 2022 - May 2022): I conducted recitation sessions and actively monitored student progress to identify challenging topics in Theory of Computation (Automata Theory) under the supervision of Prof. Arash Ahadi.
-            - Teaching Assistant for Introduction to Probability at Kharazmi University (Sep 2021 - Dec 2021): I graded assignments and provided academic support by answering student questions and explaining course material under the supervision of Prof. Meisam Moghimbeygi.
-            My Skills:
-            - Languages: C, Java, Python, SQL, MATLAB, Assembly.
-            - Frameworks: PyTorch, TensorFlow, Scikit-learn, OpenCV.
-            My Certificates:
-            - Supervised Machine Learning: Regression and Classification from Coursera.
-            - Task-Oriented Course In Fundamentals Of Python Programming & Algorithmic Thinking from Quera.
-            My Standard Exams:
-            - TOEFL IBT Overall: 91/120 (Reading: 21, Listening: 23, Speaking: 22, Writing: 25), attempted in 2025.
-            My Selected Projects:
-            - Knowledge Distillation For Image Classification (Senior Project): I developed and adapted various knowledge distillation networks in PyTorch to enhance the performance of compact models like ResNet-18 and WideResNet-16-2.
-            - Clustering Algorithms Comparison: I compared K-Means, Agglomerative Clustering, and DBSCAN using Scikit-Learn and evaluated them with metrics like Rand Index and Silhouette Score.
-            - Digit Recognition With MNIST Dataset: I implemented MLP models in both Scikit-Learn and TensorFlow to compare their performance.
-            - Compare Optimization Algorithms: I implemented and compared Gradient Descent and Newton's Method in Python.
-            - Implementing a Hotel Chain Database: I designed and implemented a relational database system for a hotel chain using SQL.
-            - Candy Store Simulation: I used SimPy in Python to model a candy store and track performance metrics.
-            - 15-Puzzle Solver: I implemented Hill-Climbing and A* algorithms to solve the 15-puzzle.
-            - Hamilton Night's Tour Solver: I developed a Java-based solution for the Knight's Tour problem using Warnsdorff's Rule.
-            - SPSS Project: I analyzed a dataset on aflatoxin in food using SPSS.
-            My Relevant Coursework: Calculus I, Calculus II, Calculus III, Probability and Statistics I, Graph Theory, Abstract Algebra, Intro. to Mathematical Sciences, Mathematical Logic and Set Theory, Combinatorics, Linear Algebra or Matrix Theory, Numerical Methods for Linear Algebra, Numerical Analysis or Numerical Methods, Intro. to Mathematical Analysis, Differential Equations, Digital Logic Design, Programming Fundamentals, Advanced Programming, Data Structures and Algorithms, Algorithm Design and Analysis, Nonlinear Programming, AI Fundamentals, Simulation and Modeling, Senior Project in Computer Science, Theory of Computation, Computer Systems Fundamentals, Computer Organization and Architecture, Database Systems, Advanced Topics in Computer Science (ATCS), Networking and Data Communication, Numerical Computing, Compiler Design.
-        `;
-
-        aiAskButton.addEventListener('click', async () => {
-            const question = aiQuestionInput.value.trim();
-            if (!question) {
-                aiAnswerText.textContent = "Please ask a question.";
-                aiAnswerContainer.classList.remove('hidden');
-                return;
-            }
-
-            aiAnswerContainer.classList.remove('hidden');
-            aiAnswerText.textContent = '';
-            aiAnswerLoader.style.display = 'flex';
-            aiAskButton.disabled = true;
-
-            const prompt = `You are Mohammad Zafari, a recent Computer Science graduate. Your personality is professional, friendly, and confident. Answer the following question from a website visitor based ONLY on the information provided in the context below. Do not make up any information. If the answer is not in the context, politely say that the information is not available in your resume but you'd be happy to discuss it further.
-
-Visitor's Question: "${question}"
-
---- MY CV CONTEXT ---
-${cvContext}
---- END CV CONTEXT ---
-
-Your Answer:`;
-
-            try {
-                const payload = { contents: [{ parts: [{ text: prompt }] }] };
-                const response = await fetch(API_URL_FLASH, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) throw new Error(`API Error: ${response.statusText}`);
-
-                const result = await response.json();
-                const answer = result.candidates[0].content.parts[0].text;
-
-                aiAnswerLoader.style.display = 'none';
-                aiAnswerText.textContent = answer;
-
-            } catch (error) {
-                console.error("Gemini API Error:", error);
-                aiAnswerLoader.style.display = 'none';
-                aiAnswerText.textContent = "Sorry, I am unable to answer at this moment. Please try again later.";
-            } finally {
-                aiAskButton.disabled = false;
-            }
-        });
+        // --- All AI-related JavaScript, API keys, and modal logic have been removed. ---
 
         // This is a single-line comment
         // This is a single-line comment
